@@ -1,19 +1,26 @@
 [gd_scene format=3 uid="uid://c5vprvthdt76m"]
 
 [ext_resource type="Texture2D" uid="uid://4v0e4rwp8r7q" path="res://Assets/Horse Parts/HorseMockup.png" id="1_4d7sh"]
+[ext_resource type="Texture2D" uid="uid://djajdiimmrv7a" path="res://Assets/Background.png" id="1_flf07"]
 [ext_resource type="PackedScene" uid="uid://bbqp3ga0rnyta" path="res://meter.tscn" id="1_wtcfe"]
 [ext_resource type="Texture2D" uid="uid://bto8forp1rf4n" path="res://Assets/panel.png" id="2_0hol4"]
 [ext_resource type="Script" uid="uid://dt3qesujcqhnp" path="res://Scripts/time.gd" id="2_q6r6c"]
 [ext_resource type="Resource" uid="uid://bpa5mfjbppu6n" path="res://Data/Blink.tres" id="4_0hol4"]
-[ext_resource type="Texture2D" uid="uid://bj0icxh18u7fs" path="res://Assets/Eyeball.png" id="4_ir8iy"]
+[ext_resource type="Texture2D" uid="uid://4cecmiyrqav3" path="res://Assets/eyeball-render-1917704347.jpg" id="5_rjqkl"]
 [ext_resource type="Script" uid="uid://chps6bq0fd0ph" path="res://Scripts/Horse Parts/eye.gd" id="6_kdubu"]
 [ext_resource type="Resource" uid="uid://d4cfx2hvy7qlm" path="res://Data/Heartbeat.tres" id="6_nr8wp"]
 [ext_resource type="Texture2D" uid="uid://bjpum4446bq2g" path="res://Assets/Horse Parts/Eye0001.png" id="7_4d7sh"]
+[ext_resource type="Texture2D" uid="uid://cs4kk7vka1noj" path="res://Assets/Cardiac-arrest-1450267271.png" id="7_k73cj"]
+[ext_resource type="Resource" uid="uid://d0j66xb8fm7pp" path="res://Data/Stock Market.tres" id="7_ta5nu"]
 [ext_resource type="Script" uid="uid://bpjh6e8631aba" path="res://Scripts/Horse Parts/heart.gd" id="8_hqns4"]
+[ext_resource type="Texture2D" uid="uid://b5ksmddpg3dp3" path="res://Assets/Screen-Shot-2019-07-31-at-5.47.12-PM-585396518.png" id="9_rjqkl"]
 [ext_resource type="Texture2D" uid="uid://dsaiyxuj4o3lq" path="res://Assets/Horse Parts/Eye0002.png" id="10_d2bti"]
 [ext_resource type="Texture2D" uid="uid://e6dqlseiag30" path="res://Assets/Horse Parts/Heart0001.png" id="11_0h7mo"]
+[ext_resource type="Resource" uid="uid://d4fsibo5v1cva" path="res://Data/Legs.tres" id="11_ei405"]
 [ext_resource type="Texture2D" uid="uid://d02rwp5bayro0" path="res://Assets/Horse Parts/Eye0003.png" id="11_ta5nu"]
 [ext_resource type="Texture2D" uid="uid://h8vhm4irfv0a" path="res://Assets/Horse Parts/Heart0002.png" id="12_0h7mo"]
+[ext_resource type="PackedScene" uid="uid://cwkqml065y6sl" path="res://leg.tscn" id="12_7vxoj"]
+[ext_resource type="Texture2D" uid="uid://cpsdfweypkyea" path="res://Assets/Horse Parts/Body0001.png" id="12_fs4d3"]
 [ext_resource type="Texture2D" uid="uid://c1hw6gdc16h0f" path="res://Assets/Horse Parts/Heart0003.png" id="13_nr8wp"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q6r6c"]
@@ -35,8 +42,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Background" type="TextureRect" parent="." unique_id=415530655]
+layout_mode = 0
+offset_right = 1080.0
+offset_bottom = 1920.0
+texture = ExtResource("1_flf07")
+
 [node name="Mockup" type="TextureRect" parent="." unique_id=487706323]
-modulate = Color(1, 1, 1, 0.2509804)
+visible = false
+modulate = Color(1, 1, 1, 0.1254902)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -57,6 +71,8 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_q6r6c")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Meter Container" unique_id=310588767]
 layout_mode = 2
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
 
 [node name="MarginContainer" type="MarginContainer" parent="Meter Container/ScrollContainer" unique_id=1269224304]
 layout_mode = 2
@@ -74,26 +90,39 @@ theme_override_constants/separation = 96
 [node name="Blink" parent="Meter Container/ScrollContainer/MarginContainer/VBoxContainer" unique_id=1497071329 instance=ExtResource("1_wtcfe")]
 layout_mode = 2
 value = 20.0
-texture_progress = ExtResource("4_ir8iy")
+texture_progress = ExtResource("5_rjqkl")
 datum = ExtResource("4_0hol4")
 
 [node name="Heartbeat" parent="Meter Container/ScrollContainer/MarginContainer/VBoxContainer" unique_id=2084534091 instance=ExtResource("1_wtcfe")]
 layout_mode = 2
 value = 20.0
-texture_progress = ExtResource("4_ir8iy")
+texture_progress = ExtResource("7_k73cj")
 datum = ExtResource("6_nr8wp")
+
+[node name="Stocks" parent="Meter Container/ScrollContainer/MarginContainer/VBoxContainer" unique_id=1349121777 instance=ExtResource("1_wtcfe")]
+layout_mode = 2
+value = 20.0
+texture_progress = ExtResource("9_rjqkl")
+datum = ExtResource("7_ta5nu")
+
+[node name="Legs" parent="Meter Container/ScrollContainer/MarginContainer/VBoxContainer" unique_id=1327711479 instance=ExtResource("1_wtcfe")]
+layout_mode = 2
+value = 20.0
+texture_progress = ExtResource("9_rjqkl")
+datum = ExtResource("11_ei405")
 
 [node name="Time" type="RichTextLabel" parent="." unique_id=1402370023]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -205.0
-offset_right = 205.0
+offset_left = -117.5
+offset_right = 117.5
 offset_bottom = 67.0
 grow_horizontal = 2
 theme_override_font_sizes/normal_font_size = 48
-text = "The horse is here!"
+text = "Time: 0:00
+"
 fit_content = true
 scroll_active = false
 autowrap_mode = 0
@@ -103,6 +132,42 @@ script = ExtResource("2_q6r6c")
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="Leg" parent="THE HORSE" unique_id=587334226 instance=ExtResource("12_7vxoj")]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 1158.0
+offset_right = 478.0
+offset_bottom = 1458.0
+
+[node name="Leg2" parent="THE HORSE" unique_id=187221419 instance=ExtResource("12_7vxoj")]
+layout_mode = 0
+offset_left = 502.0
+offset_top = 1157.0
+offset_right = 802.0
+offset_bottom = 1457.0
+
+[node name="Body" type="TextureRect" parent="THE HORSE" unique_id=30263851]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 626.0
+offset_right = 950.0
+offset_bottom = 1326.0
+texture = ExtResource("12_fs4d3")
+
+[node name="Leg3" parent="THE HORSE" unique_id=175077104 instance=ExtResource("12_7vxoj")]
+layout_mode = 0
+offset_left = 282.0
+offset_top = 1176.0
+offset_right = 582.0
+offset_bottom = 1476.0
+
+[node name="Leg4" parent="THE HORSE" unique_id=41073598 instance=ExtResource("12_7vxoj")]
+layout_mode = 0
+offset_left = 613.0
+offset_top = 1176.0
+offset_right = 913.0
+offset_bottom = 1476.0
 
 [node name="Eye" type="TextureButton" parent="THE HORSE" unique_id=885524746]
 layout_mode = 0

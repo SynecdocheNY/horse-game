@@ -8,10 +8,8 @@ class_name Datum extends Resource
 		value = clampi(setting, min, max)
 @export var delta: int = -1
 
-signal reached_min
-
 func on_tick() -> void:
 	value += delta
 	
 	if value <= min:
-		reached_min.emit()
+		Stats.bottomed_out(self)

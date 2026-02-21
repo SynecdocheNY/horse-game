@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cwkqml065y6sl"]
+
+[ext_resource type="Script" uid="uid://cdbyrje4no3wg" path="res://Scripts/Horse Parts/leg.gd" id="1_onwxs"]
+[ext_resource type="Texture2D" uid="uid://cni16egaf37u3" path="res://Assets/Horse Parts/Leg0001.png" id="2_q7tlh"]
+[ext_resource type="Texture2D" uid="uid://4cc2knffuede" path="res://Assets/Horse Parts/Leg0002.png" id="3_x6io2"]
+[ext_resource type="Texture2D" uid="uid://cqf2gc0krdjaw" path="res://Assets/Horse Parts/Leg0003.png" id="4_uyqg1"]
+
+[node name="Leg" type="TextureRect" unique_id=587334226]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_q7tlh")
+script = ExtResource("1_onwxs")
+textures = Array[Texture2D]([ExtResource("2_q7tlh"), ExtResource("3_x6io2"), ExtResource("4_uyqg1")])
