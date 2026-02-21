@@ -1,0 +1,128 @@
+[gd_scene format=3 uid="uid://c5vprvthdt76m"]
+
+[ext_resource type="Texture2D" uid="uid://4v0e4rwp8r7q" path="res://Assets/Horse Parts/HorseMockup.png" id="1_4d7sh"]
+[ext_resource type="PackedScene" uid="uid://bbqp3ga0rnyta" path="res://meter.tscn" id="1_wtcfe"]
+[ext_resource type="Texture2D" uid="uid://bto8forp1rf4n" path="res://Assets/panel.png" id="2_0hol4"]
+[ext_resource type="Script" uid="uid://dt3qesujcqhnp" path="res://Scripts/time.gd" id="2_q6r6c"]
+[ext_resource type="Resource" uid="uid://bpa5mfjbppu6n" path="res://Data/Blink.tres" id="4_0hol4"]
+[ext_resource type="Texture2D" uid="uid://bj0icxh18u7fs" path="res://Assets/Eyeball.png" id="4_ir8iy"]
+[ext_resource type="Script" uid="uid://chps6bq0fd0ph" path="res://Scripts/Horse Parts/eye.gd" id="6_kdubu"]
+[ext_resource type="Resource" uid="uid://d4cfx2hvy7qlm" path="res://Data/Heartbeat.tres" id="6_nr8wp"]
+[ext_resource type="Texture2D" uid="uid://bjpum4446bq2g" path="res://Assets/Horse Parts/Eye0001.png" id="7_4d7sh"]
+[ext_resource type="Script" uid="uid://bpjh6e8631aba" path="res://Scripts/Horse Parts/heart.gd" id="8_hqns4"]
+[ext_resource type="Texture2D" uid="uid://dsaiyxuj4o3lq" path="res://Assets/Horse Parts/Eye0002.png" id="10_d2bti"]
+[ext_resource type="Texture2D" uid="uid://e6dqlseiag30" path="res://Assets/Horse Parts/Heart0001.png" id="11_0h7mo"]
+[ext_resource type="Texture2D" uid="uid://d02rwp5bayro0" path="res://Assets/Horse Parts/Eye0003.png" id="11_ta5nu"]
+[ext_resource type="Texture2D" uid="uid://h8vhm4irfv0a" path="res://Assets/Horse Parts/Heart0002.png" id="12_0h7mo"]
+[ext_resource type="Texture2D" uid="uid://c1hw6gdc16h0f" path="res://Assets/Horse Parts/Heart0003.png" id="13_nr8wp"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q6r6c"]
+content_margin_left = 96.0
+content_margin_top = 96.0
+content_margin_right = 64.0
+content_margin_bottom = 84.0
+texture = ExtResource("2_0hol4")
+texture_margin_left = 116.0
+texture_margin_top = 111.0
+texture_margin_right = 128.0
+texture_margin_bottom = 111.0
+
+[node name="Root" type="Control" unique_id=1410221939]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Mockup" type="TextureRect" parent="." unique_id=487706323]
+modulate = Color(1, 1, 1, 0.2509804)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_4d7sh")
+stretch_mode = 2
+
+[node name="Meter Container" type="PanelContainer" parent="." unique_id=282193609]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.35
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_q6r6c")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Meter Container" unique_id=310588767]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Meter Container/ScrollContainer" unique_id=1269224304]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 48
+theme_override_constants/margin_top = 48
+theme_override_constants/margin_right = 48
+theme_override_constants/margin_bottom = 48
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Meter Container/ScrollContainer/MarginContainer" unique_id=2043021941]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 96
+
+[node name="Blink" parent="Meter Container/ScrollContainer/MarginContainer/VBoxContainer" unique_id=1497071329 instance=ExtResource("1_wtcfe")]
+layout_mode = 2
+value = 20.0
+texture_progress = ExtResource("4_ir8iy")
+datum = ExtResource("4_0hol4")
+
+[node name="Heartbeat" parent="Meter Container/ScrollContainer/MarginContainer/VBoxContainer" unique_id=2084534091 instance=ExtResource("1_wtcfe")]
+layout_mode = 2
+value = 20.0
+texture_progress = ExtResource("4_ir8iy")
+datum = ExtResource("6_nr8wp")
+
+[node name="Time" type="RichTextLabel" parent="." unique_id=1402370023]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -205.0
+offset_right = 205.0
+offset_bottom = 67.0
+grow_horizontal = 2
+theme_override_font_sizes/normal_font_size = 48
+text = "The horse is here!"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+script = ExtResource("2_q6r6c")
+
+[node name="THE HORSE" type="Control" parent="." unique_id=691164951]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Eye" type="TextureButton" parent="THE HORSE" unique_id=885524746]
+layout_mode = 0
+offset_left = 230.0
+offset_top = 779.0
+offset_right = 380.0
+offset_bottom = 929.0
+texture_normal = ExtResource("7_4d7sh")
+script = ExtResource("6_kdubu")
+textures = Array[Texture2D]([ExtResource("7_4d7sh"), ExtResource("10_d2bti"), ExtResource("11_ta5nu")])
+
+[node name="Heart" type="TextureButton" parent="THE HORSE" unique_id=1475719517]
+layout_mode = 0
+offset_left = 450.0
+offset_top = 926.0
+offset_right = 750.0
+offset_bottom = 1226.0
+texture_normal = ExtResource("11_0h7mo")
+script = ExtResource("8_hqns4")
+textures = Array[Texture2D]([ExtResource("11_0h7mo"), ExtResource("12_0h7mo"), ExtResource("13_nr8wp")])
+
+[connection signal="pressed" from="THE HORSE/Eye" to="THE HORSE/Eye" method="_on_pressed"]
+[connection signal="pressed" from="THE HORSE/Heart" to="THE HORSE/Heart" method="_on_pressed"]
