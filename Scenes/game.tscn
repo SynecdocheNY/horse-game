@@ -265,7 +265,7 @@ pivot_offset_ratio = Vector2(0.5, 0.5)
 texture = ExtResource("51_i223x")
 script = ExtResource("52_t44ld")
 
-[node name="Control2" type="Control" parent="Objects" unique_id=750234764]
+[node name="Horseshoe" type="Control" parent="Objects" unique_id=750234764]
 clip_contents = true
 custom_minimum_size = Vector2(275.65, 214.055)
 layout_mode = 1
@@ -277,7 +277,7 @@ offset_top = -40.0
 grow_horizontal = 0
 grow_vertical = 0
 
-[node name="Horseshoe" type="TextureRect" parent="Objects/Control2" unique_id=678070464]
+[node name="Horseshoe" type="TextureRect" parent="Objects/Horseshoe" unique_id=678070464]
 clip_contents = true
 layout_mode = 1
 anchors_preset = 8

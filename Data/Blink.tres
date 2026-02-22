@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource("1_wyjgl")
-max = 60
-value = 40
+max = 80
+value = 60
 metadata/_custom_type_script = "uid://begiq4jt6mvo5"

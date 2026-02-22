@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource("1_pr7ff")
-max = 240
-value = 240
+max = 360
+value = 360
 metadata/_custom_type_script = "uid://begiq4jt6mvo5"
