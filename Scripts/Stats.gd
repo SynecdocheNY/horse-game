@@ -46,6 +46,8 @@ func reset_stats() -> void:
 	sugar.value = 120
 	water.value = 160
 	will_to_live.value = 20
+	
+	tick_number = 0
 
 func on_tick() -> void:
 	tick_number += 1
