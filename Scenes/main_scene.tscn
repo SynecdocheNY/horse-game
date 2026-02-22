@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://b3vkc0d3r6oe6"]
+
+[ext_resource type="VideoStream" uid="uid://dyxb7msl4so8o" path="res://Assets/Meters/Mainmenu.ogv" id="1_6l7je"]
+[ext_resource type="Script" uid="uid://dye6txdhql7bb" path="res://Scenes/main_scene.gd" id="1_52fb6"]
+[ext_resource type="AudioStream" uid="uid://dossjip52uvl1" path="res://Assets/ingame.wav" id="3_jv6wh"]
+
+[node name="Control" type="VideoStreamPlayer" unique_id=25848681]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("1_6l7je")
+autoplay = true
+expand = true
+loop = true
+script = ExtResource("1_52fb6")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1154198343]
+stream = ExtResource("3_jv6wh")
+volume_db = -6.4
+autoplay = true

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://blqw11p3o07ib"]
+
+[ext_resource type="Texture2D" uid="uid://bd1cacwgnhn2d" path="res://Assets/Gameover.png" id="1_ojehl"]
+[ext_resource type="Script" uid="uid://dqve0ffdx3j3x" path="res://Scenes/game_over.gd" id="2_8fo1c"]
+
+[node name="Control" type="TextureRect" unique_id=1793975178]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ojehl")
+script = ExtResource("2_8fo1c")

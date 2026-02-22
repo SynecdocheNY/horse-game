@@ -1,0 +1,421 @@
+[gd_scene format=3 uid="uid://c5vprvthdt76m"]
+
+[ext_resource type="Texture2D" uid="uid://djajdiimmrv7a" path="res://Assets/Background.png" id="1_k5jl5"]
+[ext_resource type="Texture2D" uid="uid://4v0e4rwp8r7q" path="res://Assets/Horse Parts/HorseMockup.png" id="2_nqk4g"]
+[ext_resource type="Texture2D" uid="uid://bto8forp1rf4n" path="res://Assets/panel.png" id="3_fh6x0"]
+[ext_resource type="PackedScene" uid="uid://bbqp3ga0rnyta" path="res://Scenes/meter.tscn" id="4_j0obb"]
+[ext_resource type="Texture2D" uid="uid://drtrg0mgiw13a" path="res://Assets/Meters/BarMeters0003.png" id="5_nfavm"]
+[ext_resource type="Resource" uid="uid://d0j66xb8fm7pp" path="res://Data/Stock Market.tres" id="6_jcn4n"]
+[ext_resource type="Texture2D" uid="uid://dtelat40t1oax" path="res://Assets/Meters/BarMeters0008.png" id="7_l4kai"]
+[ext_resource type="Resource" uid="uid://battaxvb1catw" path="res://Data/Sugar.tres" id="8_kcoun"]
+[ext_resource type="Texture2D" uid="uid://b7wp6qtjmeu7s" path="res://Assets/Meters/BarMeters0004.png" id="9_jegl3"]
+[ext_resource type="Resource" uid="uid://bua07wlit3xj4" path="res://Data/Salt.tres" id="10_csv17"]
+[ext_resource type="Texture2D" uid="uid://b7jmslfdtuiy6" path="res://Assets/Meters/BarMeters0012.png" id="11_6i05k"]
+[ext_resource type="Resource" uid="uid://i1kxqw5f6ut6" path="res://Data/Brush.tres" id="12_1kfie"]
+[ext_resource type="Texture2D" uid="uid://c7cpehdiykex7" path="res://Assets/Meters/BarMeters0010.png" id="13_sfx3s"]
+[ext_resource type="Resource" uid="uid://bp0m11le1rns1" path="res://Data/Will to Live.tres" id="14_p5qon"]
+[ext_resource type="Texture2D" uid="uid://cp121o76p3ytw" path="res://Assets/Meters/BarMeters0009.png" id="15_gyste"]
+[ext_resource type="Resource" uid="uid://d4fsibo5v1cva" path="res://Data/Legs.tres" id="16_p3b6d"]
+[ext_resource type="Texture2D" uid="uid://c231x6vnw3uyl" path="res://Assets/Meters/BarMeters0002.png" id="17_bchkn"]
+[ext_resource type="Resource" uid="uid://d4cfx2hvy7qlm" path="res://Data/Heartbeat.tres" id="18_ff75x"]
+[ext_resource type="Texture2D" uid="uid://c1vjelsrgd2bi" path="res://Assets/Meters/BarMeters0005.png" id="19_a2m5q"]
+[ext_resource type="Texture2D" uid="uid://cht24of61dkr0" path="res://Assets/Meters/BarMeters0011.png" id="20_lknxd"]
+[ext_resource type="Texture2D" uid="uid://d0gdfsr75kdt3" path="res://Assets/Meters/BarMeters0007.png" id="21_ckj55"]
+[ext_resource type="Resource" uid="uid://dhqg6s50g4uaq" path="res://Data/Water.tres" id="22_q8b24"]
+[ext_resource type="Texture2D" uid="uid://bfgyb2yha7qri" path="res://Assets/Meters/BarMeters0006.png" id="23_aujhx"]
+[ext_resource type="Resource" uid="uid://djxlxxuunai0u" path="res://Data/Metabolism.tres" id="24_ifeo7"]
+[ext_resource type="Texture2D" uid="uid://bs54vg5ajpeks" path="res://Assets/Meters/BarMeters0001.png" id="25_qj5kr"]
+[ext_resource type="Resource" uid="uid://bpa5mfjbppu6n" path="res://Data/Blink.tres" id="26_d5jaa"]
+[ext_resource type="Script" uid="uid://dt3qesujcqhnp" path="res://Scripts/time.gd" id="27_k8ojv"]
+[ext_resource type="Script" uid="uid://c8i0jnd67xcw3" path="res://Scripts/Horse Parts/the_horse.gd" id="28_7sqp1"]
+[ext_resource type="AudioStream" uid="uid://c0bepu2n2y1fq" path="res://Assets/Voicelines/Im_Hungry.wav" id="29_gsm33"]
+[ext_resource type="AudioStream" uid="uid://udgedlay7q1l" path="res://Assets/Voicelines/ImThirsty.wav" id="30_lrctp"]
+[ext_resource type="AudioStream" uid="uid://dw023lvn8mpn1" path="res://Assets/Voicelines/Eating.wav" id="31_e6ols"]
+[ext_resource type="Texture2D" uid="uid://dlf8q7aj8thii" path="res://Assets/Horse Parts/Body0004.png" id="32_2cns2"]
+[ext_resource type="Texture2D" uid="uid://cpsdfweypkyea" path="res://Assets/Horse Parts/Body0001.png" id="33_b1mpw"]
+[ext_resource type="PackedScene" uid="uid://cwkqml065y6sl" path="res://Scenes/leg.tscn" id="34_ccfo7"]
+[ext_resource type="Script" uid="uid://dks3cx8xquvh5" path="res://Scripts/Horse Parts/hair.gd" id="35_umggo"]
+[ext_resource type="Texture2D" uid="uid://c4q4j1aboipfi" path="res://Assets/Horse Parts/Hair0001.png" id="36_w4j8i"]
+[ext_resource type="Texture2D" uid="uid://b3ixmskrhy86v" path="res://Assets/Horse Parts/Hair0002.png" id="37_fykvq"]
+[ext_resource type="Texture2D" uid="uid://dff4qveiql3ei" path="res://Assets/Horse Parts/Hair0003.png" id="38_ewwwr"]
+[ext_resource type="Texture2D" uid="uid://c5g1jnlnvuvw2" path="res://Assets/Horse Parts/Tail0001.png" id="39_rekvy"]
+[ext_resource type="Texture2D" uid="uid://y7ry8j2g2am1" path="res://Assets/Horse Parts/Tail0002.png" id="40_kwfbt"]
+[ext_resource type="Texture2D" uid="uid://cewms3jj2l0kr" path="res://Assets/Horse Parts/Tail0003.png" id="41_6l37k"]
+[ext_resource type="Texture2D" uid="uid://bjpum4446bq2g" path="res://Assets/Horse Parts/Eye0001.png" id="42_x4io4"]
+[ext_resource type="Script" uid="uid://chps6bq0fd0ph" path="res://Scripts/Horse Parts/eye.gd" id="43_l4noo"]
+[ext_resource type="Texture2D" uid="uid://dsaiyxuj4o3lq" path="res://Assets/Horse Parts/Eye0002.png" id="44_x4hgf"]
+[ext_resource type="Texture2D" uid="uid://d02rwp5bayro0" path="res://Assets/Horse Parts/Eye0003.png" id="45_145ye"]
+[ext_resource type="Texture2D" uid="uid://e6dqlseiag30" path="res://Assets/Horse Parts/Heart0001.png" id="46_xoknb"]
+[ext_resource type="Script" uid="uid://bpjh6e8631aba" path="res://Scripts/Horse Parts/heart.gd" id="47_5gjeb"]
+[ext_resource type="Texture2D" uid="uid://h8vhm4irfv0a" path="res://Assets/Horse Parts/Heart0002.png" id="48_foacb"]
+[ext_resource type="Texture2D" uid="uid://c1hw6gdc16h0f" path="res://Assets/Horse Parts/Heart0003.png" id="49_r00em"]
+[ext_resource type="Script" uid="uid://cy602fx0k0sok" path="res://Scripts/Horse Parts/mouth_zone.gd" id="50_gf3sq"]
+[ext_resource type="Texture2D" uid="uid://bivb4m35icpvy" path="res://Assets/Objects/Objects0001.png" id="51_i223x"]
+[ext_resource type="Script" uid="uid://bh1vm0ceehn0i" path="res://Scripts/draggable.gd" id="52_t44ld"]
+[ext_resource type="Texture2D" uid="uid://bu5ejqedth5wh" path="res://Assets/Objects/Objects0002.png" id="53_s05jl"]
+[ext_resource type="Texture2D" uid="uid://bfb8f8q14g33u" path="res://Assets/Objects/Objects0003.png" id="54_0q11v"]
+[ext_resource type="Texture2D" uid="uid://da7fksral33vk" path="res://Assets/Objects/Objects0004.png" id="55_sdta4"]
+[ext_resource type="Texture2D" uid="uid://b141n0sj8dmy2" path="res://Assets/Objects/Objects0005.png" id="56_nbx4s"]
+[ext_resource type="Texture2D" uid="uid://25kv6h5w8mp7" path="res://Assets/Objects/Objects0006.png" id="57_l2fsf"]
+[ext_resource type="AudioStream" uid="uid://843040vt66vj" path="res://Assets/horsecaretaker.wav" id="58_30egb"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q6r6c"]
+content_margin_left = 96.0
+content_margin_top = 96.0
+content_margin_right = 64.0
+content_margin_bottom = 84.0
+texture = ExtResource("3_fh6x0")
+texture_margin_left = 116.0
+texture_margin_top = 111.0
+texture_margin_right = 128.0
+texture_margin_bottom = 111.0
+
+[node name="Root" type="Control" unique_id=1410221939]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="." unique_id=415530655]
+layout_mode = 0
+offset_right = 1080.0
+offset_bottom = 1920.0
+texture = ExtResource("1_k5jl5")
+
+[node name="Mockup" type="TextureRect" parent="." unique_id=487706323]
+visible = false
+modulate = Color(1, 1, 1, 0.1254902)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_nqk4g")
+stretch_mode = 2
+
+[node name="Meter Container" type="PanelContainer" parent="." unique_id=282193609]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.35
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_q6r6c")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Meter Container" unique_id=310588767]
+layout_mode = 2
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="Meter Container/ScrollContainer" unique_id=1269224304]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 48
+theme_override_constants/margin_top = 48
+theme_override_constants/margin_right = 48
+theme_override_constants/margin_bottom = 48
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Meter Container/ScrollContainer/MarginContainer" unique_id=2043021941]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 96
+
+[node name="Stocks" parent="Meter Container/ScrollContainer/MarginContainer/VBoxContainer" unique_id=1349121777 instance=ExtResource("4_j0obb")]
+layout_mode = 2
+texture_progress = ExtResource("5_nfavm")
+datum = ExtResource("6_jcn4n")
+
+[node name="Sugar" parent="Meter Container/ScrollContainer/MarginContainer/VBoxContainer" unique_id=1330983733 instance=ExtResource("4_j0obb")]
+layout_mode = 2
+texture_progress = ExtResource("7_l4kai")
+datum = ExtResource("8_kcoun")
+
+[node name="Salt" parent="Meter Container/ScrollContainer/MarginContainer/VBoxContainer" unique_id=437333539 instance=ExtResource("4_j0obb")]
+layout_mode = 2
+texture_progress = ExtResource("9_jegl3")
+datum = ExtResource("10_csv17")
+
+[node name="Brush" parent="Meter Container/ScrollContainer/MarginContainer/VBoxContainer" unique_id=414354346 instance=ExtResource("4_j0obb")]
+layout_mode = 2
+texture_progress = ExtResource("11_6i05k")
+datum = ExtResource("12_1kfie")
+
+[node name="Will to Live" parent="Meter Container/ScrollContainer/MarginContainer/VBoxContainer" unique_id=227657366 instance=ExtResource("4_j0obb")]
+layout_mode = 2
+texture_progress = ExtResource("13_sfx3s")
+datum = ExtResource("14_p5qon")
+
+[node name="Legs" parent="Meter Container/ScrollContainer/MarginContainer/VBoxContainer" unique_id=1327711479 instance=ExtResource("4_j0obb")]
+layout_mode = 2
+texture_progress = ExtResource("15_gyste")
+datum = ExtResource("16_p3b6d")
+
+[node name="Heartbeat" parent="Meter Container/ScrollContainer/MarginContainer/VBoxContainer" unique_id=2084534091 instance=ExtResource("4_j0obb")]
+layout_mode = 2
+texture_progress = ExtResource("17_bchkn")
+datum = ExtResource("18_ff75x")
+
+[node name="Flies" parent="Meter Container/ScrollContainer/MarginContainer/VBoxContainer" unique_id=648237515 instance=ExtResource("4_j0obb")]
+layout_mode = 2
+texture_progress = ExtResource("19_a2m5q")
+datum = ExtResource("16_p3b6d")
+
+[node name="Fart" parent="Meter Container/ScrollContainer/MarginContainer/VBoxContainer" unique_id=1528518347 instance=ExtResource("4_j0obb")]
+layout_mode = 2
+texture_progress = ExtResource("20_lknxd")
+datum = ExtResource("16_p3b6d")
+
+[node name="Water" parent="Meter Container/ScrollContainer/MarginContainer/VBoxContainer" unique_id=799977345 instance=ExtResource("4_j0obb")]
+layout_mode = 2
+texture_progress = ExtResource("21_ckj55")
+datum = ExtResource("22_q8b24")
+
+[node name="Metabolism" parent="Meter Container/ScrollContainer/MarginContainer/VBoxContainer" unique_id=1308312618 instance=ExtResource("4_j0obb")]
+layout_mode = 2
+texture_progress = ExtResource("23_aujhx")
+datum = ExtResource("24_ifeo7")
+
+[node name="Blink" parent="Meter Container/ScrollContainer/MarginContainer/VBoxContainer" unique_id=1497071329 instance=ExtResource("4_j0obb")]
+layout_mode = 2
+texture_progress = ExtResource("25_qj5kr")
+datum = ExtResource("26_d5jaa")
+
+[node name="Time" type="RichTextLabel" parent="." unique_id=1402370023]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -117.5
+offset_right = 117.5
+offset_bottom = 67.0
+grow_horizontal = 2
+theme_override_font_sizes/normal_font_size = 48
+text = "Time: 0:00
+"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+script = ExtResource("27_k8ojv")
+
+[node name="THE HORSE" type="Control" parent="." unique_id=691164951 node_paths=PackedStringArray("player", "body")]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("28_7sqp1")
+player = NodePath("Voicelines")
+hungry = ExtResource("29_gsm33")
+thirsty = ExtResource("30_lrctp")
+eating = ExtResource("31_e6ols")
+body = NodePath("Body")
+talking_sprite = ExtResource("32_2cns2")
+normal_sprite = ExtResource("33_b1mpw")
+
+[node name="Leg" parent="THE HORSE" unique_id=587334226 instance=ExtResource("34_ccfo7")]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 1158.0
+offset_right = 478.0
+offset_bottom = 1458.0
+
+[node name="Leg2" parent="THE HORSE" unique_id=187221419 instance=ExtResource("34_ccfo7")]
+layout_mode = 0
+offset_left = 502.0
+offset_top = 1157.0
+offset_right = 802.0
+offset_bottom = 1457.0
+
+[node name="Hair" type="Control" parent="THE HORSE" unique_id=1455971568]
+anchors_preset = 0
+offset_left = 370.0
+offset_top = 646.0
+offset_right = 1130.0
+offset_bottom = 1273.0
+script = ExtResource("35_umggo")
+mane_sprites = Array[Texture2D]([ExtResource("36_w4j8i"), ExtResource("37_fykvq"), ExtResource("38_ewwwr")])
+tail_sprites = Array[Texture2D]([ExtResource("39_rekvy"), ExtResource("40_kwfbt"), ExtResource("41_6l37k")])
+
+[node name="Mane" type="TextureRect" parent="THE HORSE/Hair" unique_id=689404512]
+layout_mode = 0
+offset_left = -92.28
+offset_top = 53.885
+offset_right = 207.72107
+offset_bottom = 453.885
+texture = ExtResource("36_w4j8i")
+
+[node name="Tail" type="TextureRect" parent="THE HORSE/Hair" unique_id=110094142]
+layout_mode = 0
+offset_left = 330.0
+offset_top = 296.47
+offset_right = 630.0013
+offset_bottom = 696.47046
+texture = ExtResource("39_rekvy")
+
+[node name="Body" type="TextureRect" parent="THE HORSE" unique_id=30263851]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 626.0
+offset_right = 950.0
+offset_bottom = 1326.0
+texture = ExtResource("33_b1mpw")
+
+[node name="Leg3" parent="THE HORSE" unique_id=175077104 instance=ExtResource("34_ccfo7")]
+layout_mode = 0
+offset_left = 282.0
+offset_top = 1176.0
+offset_right = 582.0
+offset_bottom = 1476.0
+
+[node name="Leg4" parent="THE HORSE" unique_id=41073598 instance=ExtResource("34_ccfo7")]
+layout_mode = 0
+offset_left = 613.0
+offset_top = 1176.0
+offset_right = 913.0
+offset_bottom = 1476.0
+
+[node name="Eye" type="TextureButton" parent="THE HORSE" unique_id=885524746]
+layout_mode = 0
+offset_left = 230.0
+offset_top = 779.0
+offset_right = 380.0
+offset_bottom = 929.0
+texture_normal = ExtResource("42_x4io4")
+script = ExtResource("43_l4noo")
+textures = Array[Texture2D]([ExtResource("42_x4io4"), ExtResource("44_x4hgf"), ExtResource("45_145ye")])
+
+[node name="Heart" type="TextureButton" parent="THE HORSE" unique_id=1475719517]
+layout_mode = 0
+offset_left = 450.0
+offset_top = 926.0
+offset_right = 750.0
+offset_bottom = 1226.0
+texture_normal = ExtResource("46_xoknb")
+script = ExtResource("47_5gjeb")
+textures = Array[Texture2D]([ExtResource("46_xoknb"), ExtResource("48_foacb"), ExtResource("49_r00em")])
+
+[node name="Mouth Zone" type="Control" parent="THE HORSE" unique_id=1607256284]
+anchors_preset = 0
+offset_left = 72.0
+offset_top = 851.0
+offset_right = 349.0
+offset_bottom = 1084.0
+script = ExtResource("50_gf3sq")
+
+[node name="Voicelines" type="AudioStreamPlayer" parent="THE HORSE" unique_id=91333938]
+
+[node name="Objects" type="Control" parent="." unique_id=417155393]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Brush" type="Control" parent="Objects" unique_id=10444625]
+clip_contents = true
+custom_minimum_size = Vector2(275.65, 196.805)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Brush" type="TextureRect" parent="Objects/Brush" unique_id=1575302569]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -150.0
+offset_right = 150.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("51_i223x")
+script = ExtResource("52_t44ld")
+
+[node name="Control2" type="Control" parent="Objects" unique_id=750234764]
+clip_contents = true
+custom_minimum_size = Vector2(275.65, 214.055)
+layout_mode = 1
+anchor_left = 0.74
+anchor_top = 0.825
+anchor_right = 0.85
+anchor_bottom = 0.906
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Horseshoe" type="TextureRect" parent="Objects/Control2" unique_id=678070464]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -150.0
+offset_right = 150.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("53_s05jl")
+script = ExtResource("52_t44ld")
+
+[node name="Water" type="TextureRect" parent="Objects" unique_id=1907214319]
+layout_mode = 0
+offset_left = 828.0
+offset_top = 1360.0
+offset_right = 1128.0
+offset_bottom = 1660.0
+texture = ExtResource("54_0q11v")
+script = ExtResource("52_t44ld")
+
+[node name="Salt" type="TextureRect" parent="Objects" unique_id=191758814]
+layout_mode = 0
+offset_left = -46.0
+offset_top = 1632.0
+offset_right = 254.0
+offset_bottom = 1932.0
+texture = ExtResource("55_sdta4")
+script = ExtResource("52_t44ld")
+
+[node name="Sugar" type="TextureRect" parent="Objects" unique_id=1141295174]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 1642.0
+offset_right = 484.0
+offset_bottom = 1942.0
+texture = ExtResource("56_nbx4s")
+script = ExtResource("52_t44ld")
+
+[node name="Food" type="TextureRect" parent="Objects" unique_id=1920908998]
+layout_mode = 0
+offset_left = -28.0
+offset_top = 1395.0
+offset_right = 272.0
+offset_bottom = 1695.0
+texture = ExtResource("57_l2fsf")
+script = ExtResource("52_t44ld")
+
+[node name="Main Theme" type="AudioStreamPlayer" parent="." unique_id=1724314923]
+stream = ExtResource("58_30egb")
+volume_db = -6.4
+autoplay = true
+
+[connection signal="pressed" from="THE HORSE/Eye" to="THE HORSE/Eye" method="_on_pressed"]
+[connection signal="pressed" from="THE HORSE/Heart" to="THE HORSE/Heart" method="_on_pressed"]
+[connection signal="eating" from="THE HORSE/Mouth Zone" to="THE HORSE" method="on_eating"]

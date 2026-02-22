@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Datum" format=3 uid="uid://i1kxqw5f6ut6"]
+
+[ext_resource type="Script" uid="uid://begiq4jt6mvo5" path="res://Scripts/Datum.gd" id="1_8vavf"]
+
+[resource]
+script = ExtResource("1_8vavf")
+max = 400
+value = 200
+metadata/_custom_type_script = "uid://begiq4jt6mvo5"
