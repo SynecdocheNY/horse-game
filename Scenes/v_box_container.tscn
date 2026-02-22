@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://bd2bw21bkrp7n"]
+
+[ext_resource type="PackedScene" uid="uid://bbqp3ga0rnyta" path="res://Scenes/meter.tscn" id="1_kpxle"]
+[ext_resource type="Texture2D" uid="uid://drtrg0mgiw13a" path="res://Assets/Meters/BarMeters0003.png" id="2_v61nj"]
+[ext_resource type="Resource" uid="uid://d0j66xb8fm7pp" path="res://Data/Stock Market.tres" id="3_rcwat"]
+[ext_resource type="Texture2D" uid="uid://dtelat40t1oax" path="res://Assets/Meters/BarMeters0008.png" id="4_rdbu4"]
+[ext_resource type="Resource" uid="uid://battaxvb1catw" path="res://Data/Sugar.tres" id="5_38txe"]
+[ext_resource type="Texture2D" uid="uid://b7wp6qtjmeu7s" path="res://Assets/Meters/BarMeters0004.png" id="6_n1abn"]
+[ext_resource type="Resource" uid="uid://bua07wlit3xj4" path="res://Data/Salt.tres" id="7_qgqki"]
+[ext_resource type="Texture2D" uid="uid://b7jmslfdtuiy6" path="res://Assets/Meters/BarMeters0012.png" id="8_6maxh"]
+[ext_resource type="Resource" uid="uid://i1kxqw5f6ut6" path="res://Data/Brush.tres" id="9_djcro"]
+[ext_resource type="Texture2D" uid="uid://c7cpehdiykex7" path="res://Assets/Meters/BarMeters0010.png" id="10_44ai3"]
+[ext_resource type="Resource" uid="uid://bp0m11le1rns1" path="res://Data/Will to Live.tres" id="11_axkeh"]
+[ext_resource type="Texture2D" uid="uid://cp121o76p3ytw" path="res://Assets/Meters/BarMeters0009.png" id="12_xc67q"]
+[ext_resource type="Resource" uid="uid://d4fsibo5v1cva" path="res://Data/Legs.tres" id="13_7o5s2"]
+[ext_resource type="Texture2D" uid="uid://c231x6vnw3uyl" path="res://Assets/Meters/BarMeters0002.png" id="14_jmn1n"]
+[ext_resource type="Resource" uid="uid://d4cfx2hvy7qlm" path="res://Data/Heartbeat.tres" id="15_pmbtd"]
+[ext_resource type="Texture2D" uid="uid://c1vjelsrgd2bi" path="res://Assets/Meters/BarMeters0005.png" id="16_pxv5n"]
+[ext_resource type="Texture2D" uid="uid://cht24of61dkr0" path="res://Assets/Meters/BarMeters0011.png" id="17_pm41p"]
+[ext_resource type="Texture2D" uid="uid://d0gdfsr75kdt3" path="res://Assets/Meters/BarMeters0007.png" id="18_lpex4"]
+[ext_resource type="Resource" uid="uid://dhqg6s50g4uaq" path="res://Data/Water.tres" id="19_pfgev"]
+[ext_resource type="Texture2D" uid="uid://bfgyb2yha7qri" path="res://Assets/Meters/BarMeters0006.png" id="20_0x3as"]
+[ext_resource type="Resource" uid="uid://djxlxxuunai0u" path="res://Data/Metabolism.tres" id="21_7ovy5"]
+[ext_resource type="Texture2D" uid="uid://bs54vg5ajpeks" path="res://Assets/Meters/BarMeters0001.png" id="22_0clf7"]
+[ext_resource type="Resource" uid="uid://bpa5mfjbppu6n" path="res://Data/Blink.tres" id="23_ux4ge"]
+
+[node name="VBoxContainer" type="VBoxContainer" unique_id=2031008349]
+size_flags_horizontal = 3
+theme_override_constants/separation = 96
+
+[node name="Stocks" parent="." unique_id=2084534091 instance=ExtResource("1_kpxle")]
+layout_mode = 2
+texture_progress = ExtResource("2_v61nj")
+datum = ExtResource("3_rcwat")
+
+[node name="Sugar" parent="." unique_id=1866008426 instance=ExtResource("1_kpxle")]
+layout_mode = 2
+texture_progress = ExtResource("4_rdbu4")
+datum = ExtResource("5_38txe")
+
+[node name="Salt" parent="." unique_id=1377650203 instance=ExtResource("1_kpxle")]
+layout_mode = 2
+texture_progress = ExtResource("6_n1abn")
+datum = ExtResource("7_qgqki")
+
+[node name="Brush" parent="." unique_id=723290939 instance=ExtResource("1_kpxle")]
+layout_mode = 2
+texture_progress = ExtResource("8_6maxh")
+datum = ExtResource("9_djcro")
+
+[node name="Will to Live" parent="." unique_id=833021254 instance=ExtResource("1_kpxle")]
+layout_mode = 2
+texture_progress = ExtResource("10_44ai3")
+datum = ExtResource("11_axkeh")
+
+[node name="Legs" parent="." unique_id=895680604 instance=ExtResource("1_kpxle")]
+layout_mode = 2
+texture_progress = ExtResource("12_xc67q")
+datum = ExtResource("13_7o5s2")
+
+[node name="Heartbeat" parent="." unique_id=328934454 instance=ExtResource("1_kpxle")]
+layout_mode = 2
+texture_progress = ExtResource("14_jmn1n")
+datum = ExtResource("15_pmbtd")
+
+[node name="Flies" parent="." unique_id=582915497 instance=ExtResource("1_kpxle")]
+layout_mode = 2
+texture_progress = ExtResource("16_pxv5n")
+datum = ExtResource("13_7o5s2")
+
+[node name="Fart" parent="." unique_id=562663307 instance=ExtResource("1_kpxle")]
+layout_mode = 2
+texture_progress = ExtResource("17_pm41p")
+datum = ExtResource("13_7o5s2")
+
+[node name="Water" parent="." unique_id=1764502728 instance=ExtResource("1_kpxle")]
+layout_mode = 2
+texture_progress = ExtResource("18_lpex4")
+datum = ExtResource("19_pfgev")
+
+[node name="Metabolism" parent="." unique_id=1492865074 instance=ExtResource("1_kpxle")]
+layout_mode = 2
+texture_progress = ExtResource("20_0x3as")
+datum = ExtResource("21_7ovy5")
+
+[node name="Blink" parent="." unique_id=1065947251 instance=ExtResource("1_kpxle")]
+layout_mode = 2
+texture_progress = ExtResource("22_0clf7")
+datum = ExtResource("23_ux4ge")

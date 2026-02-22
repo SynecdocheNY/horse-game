@@ -3,29 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://djajdiimmrv7a" path="res://Assets/Background.png" id="1_k5jl5"]
 [ext_resource type="Texture2D" uid="uid://4v0e4rwp8r7q" path="res://Assets/Horse Parts/HorseMockup.png" id="2_nqk4g"]
 [ext_resource type="Texture2D" uid="uid://bto8forp1rf4n" path="res://Assets/panel.png" id="3_fh6x0"]
-[ext_resource type="PackedScene" uid="uid://bbqp3ga0rnyta" path="res://Scenes/meter.tscn" id="4_j0obb"]
-[ext_resource type="Texture2D" uid="uid://drtrg0mgiw13a" path="res://Assets/Meters/BarMeters0003.png" id="5_nfavm"]
-[ext_resource type="Resource" uid="uid://d0j66xb8fm7pp" path="res://Data/Stock Market.tres" id="6_jcn4n"]
-[ext_resource type="Texture2D" uid="uid://dtelat40t1oax" path="res://Assets/Meters/BarMeters0008.png" id="7_l4kai"]
-[ext_resource type="Resource" uid="uid://battaxvb1catw" path="res://Data/Sugar.tres" id="8_kcoun"]
-[ext_resource type="Texture2D" uid="uid://b7wp6qtjmeu7s" path="res://Assets/Meters/BarMeters0004.png" id="9_jegl3"]
-[ext_resource type="Resource" uid="uid://bua07wlit3xj4" path="res://Data/Salt.tres" id="10_csv17"]
-[ext_resource type="Texture2D" uid="uid://b7jmslfdtuiy6" path="res://Assets/Meters/BarMeters0012.png" id="11_6i05k"]
-[ext_resource type="Resource" uid="uid://i1kxqw5f6ut6" path="res://Data/Brush.tres" id="12_1kfie"]
-[ext_resource type="Texture2D" uid="uid://c7cpehdiykex7" path="res://Assets/Meters/BarMeters0010.png" id="13_sfx3s"]
-[ext_resource type="Resource" uid="uid://bp0m11le1rns1" path="res://Data/Will to Live.tres" id="14_p5qon"]
-[ext_resource type="Texture2D" uid="uid://cp121o76p3ytw" path="res://Assets/Meters/BarMeters0009.png" id="15_gyste"]
-[ext_resource type="Resource" uid="uid://d4fsibo5v1cva" path="res://Data/Legs.tres" id="16_p3b6d"]
-[ext_resource type="Texture2D" uid="uid://c231x6vnw3uyl" path="res://Assets/Meters/BarMeters0002.png" id="17_bchkn"]
-[ext_resource type="Resource" uid="uid://d4cfx2hvy7qlm" path="res://Data/Heartbeat.tres" id="18_ff75x"]
-[ext_resource type="Texture2D" uid="uid://c1vjelsrgd2bi" path="res://Assets/Meters/BarMeters0005.png" id="19_a2m5q"]
-[ext_resource type="Texture2D" uid="uid://cht24of61dkr0" path="res://Assets/Meters/BarMeters0011.png" id="20_lknxd"]
-[ext_resource type="Texture2D" uid="uid://d0gdfsr75kdt3" path="res://Assets/Meters/BarMeters0007.png" id="21_ckj55"]
-[ext_resource type="Resource" uid="uid://dhqg6s50g4uaq" path="res://Data/Water.tres" id="22_q8b24"]
-[ext_resource type="Texture2D" uid="uid://bfgyb2yha7qri" path="res://Assets/Meters/BarMeters0006.png" id="23_aujhx"]
-[ext_resource type="Resource" uid="uid://djxlxxuunai0u" path="res://Data/Metabolism.tres" id="24_ifeo7"]
-[ext_resource type="Texture2D" uid="uid://bs54vg5ajpeks" path="res://Assets/Meters/BarMeters0001.png" id="25_qj5kr"]
-[ext_resource type="Resource" uid="uid://bpa5mfjbppu6n" path="res://Data/Blink.tres" id="26_d5jaa"]
+[ext_resource type="PackedScene" uid="uid://bd2bw21bkrp7n" path="res://Scenes/v_box_container.tscn" id="4_i26dy"]
 [ext_resource type="Script" uid="uid://dt3qesujcqhnp" path="res://Scripts/time.gd" id="27_k8ojv"]
 [ext_resource type="Script" uid="uid://c8i0jnd67xcw3" path="res://Scripts/Horse Parts/the_horse.gd" id="28_7sqp1"]
 [ext_resource type="AudioStream" uid="uid://c0bepu2n2y1fq" path="res://Assets/Voicelines/Im_Hungry.wav" id="29_gsm33"]
@@ -110,6 +88,9 @@ layout_mode = 2
 horizontal_scroll_mode = 3
 vertical_scroll_mode = 3
 
+[node name="VBoxContainer" parent="Meter Container/ScrollContainer" unique_id=2031008349 instance=ExtResource("4_i26dy")]
+layout_mode = 2
+
 [node name="MarginContainer" type="MarginContainer" parent="Meter Container/ScrollContainer" unique_id=1269224304]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -117,71 +98,6 @@ theme_override_constants/margin_left = 48
 theme_override_constants/margin_top = 48
 theme_override_constants/margin_right = 48
 theme_override_constants/margin_bottom = 48
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Meter Container/ScrollContainer/MarginContainer" unique_id=2043021941]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_constants/separation = 96
-
-[node name="Stocks" parent="Meter Container/ScrollContainer/MarginContainer/VBoxContainer" unique_id=1349121777 instance=ExtResource("4_j0obb")]
-layout_mode = 2
-texture_progress = ExtResource("5_nfavm")
-datum = ExtResource("6_jcn4n")
-
-[node name="Sugar" parent="Meter Container/ScrollContainer/MarginContainer/VBoxContainer" unique_id=1330983733 instance=ExtResource("4_j0obb")]
-layout_mode = 2
-texture_progress = ExtResource("7_l4kai")
-datum = ExtResource("8_kcoun")
-
-[node name="Salt" parent="Meter Container/ScrollContainer/MarginContainer/VBoxContainer" unique_id=437333539 instance=ExtResource("4_j0obb")]
-layout_mode = 2
-texture_progress = ExtResource("9_jegl3")
-datum = ExtResource("10_csv17")
-
-[node name="Brush" parent="Meter Container/ScrollContainer/MarginContainer/VBoxContainer" unique_id=414354346 instance=ExtResource("4_j0obb")]
-layout_mode = 2
-texture_progress = ExtResource("11_6i05k")
-datum = ExtResource("12_1kfie")
-
-[node name="Will to Live" parent="Meter Container/ScrollContainer/MarginContainer/VBoxContainer" unique_id=227657366 instance=ExtResource("4_j0obb")]
-layout_mode = 2
-texture_progress = ExtResource("13_sfx3s")
-datum = ExtResource("14_p5qon")
-
-[node name="Legs" parent="Meter Container/ScrollContainer/MarginContainer/VBoxContainer" unique_id=1327711479 instance=ExtResource("4_j0obb")]
-layout_mode = 2
-texture_progress = ExtResource("15_gyste")
-datum = ExtResource("16_p3b6d")
-
-[node name="Heartbeat" parent="Meter Container/ScrollContainer/MarginContainer/VBoxContainer" unique_id=2084534091 instance=ExtResource("4_j0obb")]
-layout_mode = 2
-texture_progress = ExtResource("17_bchkn")
-datum = ExtResource("18_ff75x")
-
-[node name="Flies" parent="Meter Container/ScrollContainer/MarginContainer/VBoxContainer" unique_id=648237515 instance=ExtResource("4_j0obb")]
-layout_mode = 2
-texture_progress = ExtResource("19_a2m5q")
-datum = ExtResource("16_p3b6d")
-
-[node name="Fart" parent="Meter Container/ScrollContainer/MarginContainer/VBoxContainer" unique_id=1528518347 instance=ExtResource("4_j0obb")]
-layout_mode = 2
-texture_progress = ExtResource("20_lknxd")
-datum = ExtResource("16_p3b6d")
-
-[node name="Water" parent="Meter Container/ScrollContainer/MarginContainer/VBoxContainer" unique_id=799977345 instance=ExtResource("4_j0obb")]
-layout_mode = 2
-texture_progress = ExtResource("21_ckj55")
-datum = ExtResource("22_q8b24")
-
-[node name="Metabolism" parent="Meter Container/ScrollContainer/MarginContainer/VBoxContainer" unique_id=1308312618 instance=ExtResource("4_j0obb")]
-layout_mode = 2
-texture_progress = ExtResource("23_aujhx")
-datum = ExtResource("24_ifeo7")
-
-[node name="Blink" parent="Meter Container/ScrollContainer/MarginContainer/VBoxContainer" unique_id=1497071329 instance=ExtResource("4_j0obb")]
-layout_mode = 2
-texture_progress = ExtResource("25_qj5kr")
-datum = ExtResource("26_d5jaa")
 
 [node name="Time" type="RichTextLabel" parent="." unique_id=1402370023]
 layout_mode = 1
