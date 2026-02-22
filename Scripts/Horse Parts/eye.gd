@@ -9,7 +9,7 @@ func _ready() -> void:
 
 func on_tick() -> void:
 	if Stats.blink.value <= threshold:
-		texture_normal = [textures[1], textures[2]].pick_random()
+		texture_normal = [textures[1], textures[2]][Stats.tick_number % 2]
 	else:
 		texture_normal = textures[0]
 
