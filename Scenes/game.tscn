@@ -15,6 +15,7 @@
 [ext_resource type="Script" uid="uid://dks3cx8xquvh5" path="res://Scripts/Horse Parts/hair.gd" id="35_umggo"]
 [ext_resource type="Texture2D" uid="uid://c4q4j1aboipfi" path="res://Assets/Horse Parts/Hair0001.png" id="36_w4j8i"]
 [ext_resource type="Texture2D" uid="uid://b3ixmskrhy86v" path="res://Assets/Horse Parts/Hair0002.png" id="37_fykvq"]
+[ext_resource type="Texture2D" uid="uid://7jpqklo3g5xm" path="res://Assets/red x.png" id="37_lmoi6"]
 [ext_resource type="Texture2D" uid="uid://dff4qveiql3ei" path="res://Assets/Horse Parts/Hair0003.png" id="38_ewwwr"]
 [ext_resource type="Texture2D" uid="uid://c5g1jnlnvuvw2" path="res://Assets/Horse Parts/Tail0001.png" id="39_rekvy"]
 [ext_resource type="Texture2D" uid="uid://y7ry8j2g2am1" path="res://Assets/Horse Parts/Tail0002.png" id="40_kwfbt"]
@@ -330,6 +331,20 @@ offset_right = 272.0
 offset_bottom = 1695.0
 texture = ExtResource("57_l2fsf")
 script = ExtResource("52_t44ld")
+
+[node name="Duct Tape" type="TextureRect" parent="." unique_id=9021361]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_bottom = 64.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("37_lmoi6")
+expand_mode = 1
 
 [node name="Main Theme" type="AudioStreamPlayer" parent="." unique_id=1724314923]
 stream = ExtResource("58_30egb")
